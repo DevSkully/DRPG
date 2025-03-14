@@ -1,2 +1,5 @@
+res://tscn/node_2d.tscn
 res://Code/Player-Object.gd
-res://Code/Stat-Object.gd
+res://tscn/main_menu.tscn
+res://Code/Main_Menu_Script.gd
+res://tscn/World.tscn

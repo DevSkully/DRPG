@@ -1,0 +1,124 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6qp6jkl2s7gl"]
+
+[ext_resource type="Texture2D" uid="uid://bpcgg7qottuyj" path="res://Assets/Background/Game-Frame.png" id="1_4ivmp"]
+[ext_resource type="Script" uid="uid://by0jxgma7v872" path="res://Code/world_script.gd" id="1_rov87"]
+[ext_resource type="Texture2D" uid="uid://rxtbu3ajpooh" path="res://Assets/Character-Portrait/Knight.png" id="2_i5gsw"]
+[ext_resource type="Texture2D" uid="uid://dsxpbbprfxni5" path="res://Assets/Icons&Buttons/Heart-icon.png" id="3_pweil"]
+[ext_resource type="Texture2D" uid="uid://cqtswl5mce6gj" path="res://Assets/Icons&Buttons/Physical-Damage.png" id="4_rov87"]
+[ext_resource type="Texture2D" uid="uid://0ropuri7nrb8" path="res://Assets/Icons&Buttons/Magical-Damage.png" id="5_lljqt"]
+[ext_resource type="Texture2D" uid="uid://cv03ipmoehoek" path="res://Assets/Icons&Buttons/Shield.png" id="6_6sclq"]
+[ext_resource type="FontFile" uid="uid://8slqempjfw28" path="res://Assets/FONTS/nintendo-nes-font.ttf" id="7_fanj6"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_onqtv"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_rov87")
+
+[node name="Background" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 224.0
+scale = Vector2(2, 2)
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_4ivmp")
+
+[node name="Character_Information" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 320.0
+offset_right = 160.0
+offset_bottom = 416.0
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Character_Information"]
+visible = false
+modulate = Color(0, 1, 1, 1)
+position = Vector2(64, 48)
+scale = Vector2(128, 96)
+mesh = SubResource("QuadMesh_onqtv")
+
+[node name="Player-Portrait" type="TextureRect" parent="Character_Information"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 6.0
+offset_right = 38.0
+offset_bottom = 46.0
+scale = Vector2(2, 2)
+texture = ExtResource("2_i5gsw")
+
+[node name="Health" type="TextureRect" parent="Character_Information"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 6.0
+offset_right = 96.0
+offset_bottom = 22.0
+texture = ExtResource("3_pweil")
+
+[node name="PDamage" type="TextureRect" parent="Character_Information"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 28.0
+offset_right = 96.0
+offset_bottom = 44.0
+texture = ExtResource("4_rov87")
+
+[node name="MDamage" type="TextureRect" parent="Character_Information"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 50.0
+offset_right = 96.0
+offset_bottom = 66.0
+texture = ExtResource("5_lljqt")
+
+[node name="Shield" type="TextureRect" parent="Character_Information"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 72.0
+offset_right = 96.0
+offset_bottom = 88.0
+texture = ExtResource("6_6sclq")
+
+[node name="HealthLabel" type="Label" parent="Character_Information"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 11.0
+offset_right = 124.0
+offset_bottom = 19.0
+theme_override_fonts/font = ExtResource("7_fanj6")
+theme_override_font_sizes/font_size = 8
+text = "100"
+
+[node name="Attack_Label" type="Label" parent="Character_Information"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 32.0
+offset_right = 124.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("7_fanj6")
+theme_override_font_sizes/font_size = 8
+text = "100"
+
+[node name="Magic_Label" type="Label" parent="Character_Information"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 54.0
+offset_right = 124.0
+offset_bottom = 62.0
+theme_override_fonts/font = ExtResource("7_fanj6")
+theme_override_font_sizes/font_size = 8
+text = "100"
+
+[node name="Shield_Label" type="Label" parent="Character_Information"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 76.0
+offset_right = 124.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("7_fanj6")
+theme_override_font_sizes/font_size = 8
+text = "100"
