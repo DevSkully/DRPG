@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1741949401
+icon.svg::CompressedTexture2D::8453748046522997991::1741834611::1741949402::1::::<><><>0<>0<>d9184a4e03f32eab40ed3b3c2c353e40<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1741949351::0::1::::<><><>0<>0<><>::
+::res://Assets/::1741941889
+::res://Assets/ASEPRITE/::1741945245
+::res://Assets/GUI/::1741834977
+::res://Code/::1741912597
+Player-Object.gd::GDScript::8335181037733062974::1741909708::0::1::::<>Stats<><>0<>0<><>::
+Stat-Object.gd::GDScript::8103166580752686546::1741912597::0::1::::Stat<>Node<><>0<>0<><>::
+::res://tscn/::1741912597
+node_2d.tscn::PackedScene::1609096191971711064::1741912597::0::1::::<><><>0<>0<><>::uid://dnph77780ar0m::::res://Code/Stat-Object.gd
+::res://tscn/Characters/::1741834948
+::res://tscn/Characters/Enemies/::1741834948
+::res://tscn/Characters/Hero/::1741834936
+::res://tscn/Gui/::1741834876
