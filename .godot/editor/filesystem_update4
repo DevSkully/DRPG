@@ -1,5 +1,5 @@
-res://tscn/node_2d.tscn
-res://Code/Player-Object.gd
-res://tscn/main_menu.tscn
-res://Code/Main_Menu_Script.gd
 res://tscn/World.tscn
+res://Code/Char_Info_script.gd
+res://Code/world_script.gd
+res://tscn/Gui/character_information.tscn
+res://tscn/main_menu.tscn

@@ -1,0 +1,106 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0t57iwubfd1r"]
+
+[ext_resource type="Script" uid="uid://dhr7s5so8e62f" path="res://Code/Char_Info_script.gd" id="1_tltn6"]
+[ext_resource type="Texture2D" uid="uid://rxtbu3ajpooh" path="res://Assets/Character-Portrait/Knight.png" id="2_yi0kq"]
+[ext_resource type="Texture2D" uid="uid://dsxpbbprfxni5" path="res://Assets/Icons&Buttons/Heart-icon.png" id="3_17pq8"]
+[ext_resource type="Texture2D" uid="uid://cqtswl5mce6gj" path="res://Assets/Icons&Buttons/Physical-Damage.png" id="4_a8o0c"]
+[ext_resource type="Texture2D" uid="uid://0ropuri7nrb8" path="res://Assets/Icons&Buttons/Magical-Damage.png" id="5_1wv6x"]
+[ext_resource type="Texture2D" uid="uid://cv03ipmoehoek" path="res://Assets/Icons&Buttons/Shield.png" id="6_f72v4"]
+[ext_resource type="FontFile" uid="uid://8slqempjfw28" path="res://Assets/FONTS/nintendo-nes-font.ttf" id="7_kquwq"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_onqtv"]
+
+[node name="Character_Information" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 128.0
+offset_bottom = 96.0
+script = ExtResource("1_tltn6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+visible = false
+modulate = Color(0, 1, 1, 1)
+position = Vector2(64, 48)
+scale = Vector2(128, 96)
+mesh = SubResource("QuadMesh_onqtv")
+
+[node name="Player-Portrait" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 6.0
+offset_right = 38.0
+offset_bottom = 46.0
+scale = Vector2(2, 2)
+texture = ExtResource("2_yi0kq")
+
+[node name="Health" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 6.0
+offset_right = 96.0
+offset_bottom = 22.0
+texture = ExtResource("3_17pq8")
+
+[node name="PDamage" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 28.0
+offset_right = 96.0
+offset_bottom = 44.0
+texture = ExtResource("4_a8o0c")
+
+[node name="MDamage" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 50.0
+offset_right = 96.0
+offset_bottom = 66.0
+texture = ExtResource("5_1wv6x")
+
+[node name="Shield" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 72.0
+offset_right = 96.0
+offset_bottom = 88.0
+texture = ExtResource("6_f72v4")
+
+[node name="HealthLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 11.0
+offset_right = 124.0
+offset_bottom = 19.0
+theme_override_fonts/font = ExtResource("7_kquwq")
+theme_override_font_sizes/font_size = 8
+text = "100"
+
+[node name="Attack_Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 32.0
+offset_right = 124.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("7_kquwq")
+theme_override_font_sizes/font_size = 8
+text = "100"
+
+[node name="Magic_Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 54.0
+offset_right = 124.0
+offset_bottom = 62.0
+theme_override_fonts/font = ExtResource("7_kquwq")
+theme_override_font_sizes/font_size = 8
+text = "100"
+
+[node name="Shield_Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 76.0
+offset_right = 124.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("7_kquwq")
+theme_override_font_sizes/font_size = 8
+text = "100"
