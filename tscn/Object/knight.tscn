@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b26ht5t6egl3w"]
+
+[ext_resource type="Script" uid="uid://ch4ona1p8msqu" path="res://Code/Character_scripts/knight.gd" id="1_jesqa"]
+[ext_resource type="Texture2D" uid="uid://c4k0s0u6ll6hj" path="res://Assets/Character-Portrait/Knight.png" id="2_ghv27"]
+
+[node name="Knight" type="Node"]
+script = ExtResource("1_jesqa")
+Name = "Knight"
+Health = 100.0
+Attack = 20.0
+Shield = 40.0
+Sprite = ExtResource("2_ghv27")

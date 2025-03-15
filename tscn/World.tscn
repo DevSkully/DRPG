@@ -20,6 +20,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_4ivmp")
 
+[node name="Portait" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Character_Information" parent="." instance=ExtResource("3_onqtv")]
 offset_left = 32.0
 offset_top = 320.0

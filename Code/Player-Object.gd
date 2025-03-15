@@ -1,5 +1,4 @@
-class_name Player
-extends Stat
+class_name Player extends Stat
 ## -- Variable -- ##
 
 ## -- Functions -- ##
