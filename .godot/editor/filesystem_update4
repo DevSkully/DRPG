@@ -1,12 +1,3 @@
-res://tscn/World.tscn
-res://Code/Char_Info_script.gd
-res://Code/Player-Object.gd
-res://Code/Stat-Object.gd
 res://tscn/main_menu.tscn
+res://tscn/World.tscn
 res://tscn/Gui/character_information.tscn
-res://Code/world_script.gd
-res://tscn/Object/Character_Object.tscn
-res://tscn/Object/knight.tscn
-res://Code/Character_scripts/knight.gd
-res://Code/Main_Menu_Script.gd
-res://Code/game_manager.gd
