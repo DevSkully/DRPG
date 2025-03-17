@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SoundEffectSettings" load_steps=3 format=3 uid="uid://blcepb2bsodrn"]
+
+[ext_resource type="Script" uid="uid://ch3gbidg4jm3y" path="res://Code/Audio/Sound.gd" id="1_n0ibd"]
+[ext_resource type="AudioStream" uid="uid://b26avliqm2y31" path="res://Assets/Music/SoundEffects/Normal_Monster_Defeat.mp3" id="2_ruadp"]
+
+[resource]
+script = ExtResource("1_n0ibd")
+limit = 0
+type = 4
+sound_effect = ExtResource("2_ruadp")
+volume = 0
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://ch3gbidg4jm3y"

@@ -18,5 +18,4 @@ func _ready() -> void:
 	Char_info01._setCharacter(init_Knight)
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("A-Button"):
-		init_Knight.set_Health(-10)
+	pass

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SoundEffectSettings" load_steps=3 format=3 uid="uid://cnktoksu5hqih"]
+
+[ext_resource type="Script" uid="uid://ch3gbidg4jm3y" path="res://Code/Audio/Sound.gd" id="1_liqb5"]
+[ext_resource type="AudioStream" uid="uid://biuq5jb55c0tt" path="res://Assets/Music/SoundEffects/PlayerDamaged.mp3" id="2_l3p48"]
+
+[resource]
+script = ExtResource("1_liqb5")
+limit = 3
+type = 1
+sound_effect = ExtResource("2_l3p48")
+volume = -5
+pitch_scale = 0.9
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://ch3gbidg4jm3y"

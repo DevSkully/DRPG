@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SoundEffectSettings" load_steps=3 format=3 uid="uid://ciyptnsyvyl3v"]
+
+[ext_resource type="Script" uid="uid://ch3gbidg4jm3y" path="res://Code/Audio/Sound.gd" id="1_ifw6q"]
+[ext_resource type="AudioStream" uid="uid://cjq1gnnabot2h" path="res://Assets/Music/SoundEffects/Power_up.mp3" id="2_bak7f"]
+
+[resource]
+script = ExtResource("1_ifw6q")
+limit = 0
+type = 5
+sound_effect = ExtResource("2_bak7f")
+volume = 0
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://ch3gbidg4jm3y"

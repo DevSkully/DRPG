@@ -1,0 +1,13 @@
+[gd_scene load_steps=8 format=3 uid="uid://b6eopylshrhfc"]
+
+[ext_resource type="Script" uid="uid://cvsnou7ujof7n" path="res://Code/Audio/audio_manager.gd" id="1_eywuy"]
+[ext_resource type="Script" uid="uid://ch3gbidg4jm3y" path="res://Code/Audio/Sound.gd" id="2_qx3tq"]
+[ext_resource type="Resource" uid="uid://cnktoksu5hqih" path="res://tscn/UI/Player_Damage.tres" id="3_qx3tq"]
+[ext_resource type="Resource" uid="uid://do5gpfsjs38ip" path="res://tscn/UI/Game_Fail.tres" id="4_d1op0"]
+[ext_resource type="Resource" uid="uid://ljvqs5iyg27y" path="res://tscn/UI/Game_Start.tres" id="5_5e0v6"]
+[ext_resource type="Resource" uid="uid://blcepb2bsodrn" path="res://tscn/UI/Normal_Monster_Defeat.tres" id="6_u5b0v"]
+[ext_resource type="Resource" uid="uid://ciyptnsyvyl3v" path="res://tscn/UI/Power_Up.tres" id="7_kyliu"]
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource("1_eywuy")
+sound_effect_settings = Array[ExtResource("2_qx3tq")]([ExtResource("3_qx3tq"), ExtResource("4_d1op0"), ExtResource("5_5e0v6"), ExtResource("6_u5b0v"), ExtResource("7_kyliu")])
