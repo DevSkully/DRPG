@@ -32,4 +32,6 @@ texture_normal = ExtResource("2_cpdt8")
 texture_pressed = ExtResource("3_ra1sj")
 texture_hover = ExtResource("4_p6scp")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="pressed" from="Control/TextureButton" to="." method="_on_pressed"]

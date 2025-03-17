@@ -4,7 +4,11 @@ extends Node2D
 ## -- Variables -- ##
 # -  Character Information - #
 @onready var knight = preload("res://tscn/Object/knight.tscn")
+@onready var wizard = preload("res://tscn/Object/wizard.tscn")
+@onready var rogue  = preload("res://tscn/Object/rogue.tscn")
 var init_Knight
+var init_wizard
+var init_rogue
 
 @onready var portrait = $Portait
 

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://budhnvfocit8s"]
+
+[ext_resource type="Script" uid="uid://ra63uap2il30" path="res://Code/Character_scripts/wizard.gd" id="1_rk1do"]
+
+[node name="Wizard" type="Node"]
+script = ExtResource("1_rk1do")

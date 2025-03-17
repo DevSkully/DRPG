@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="SoundEffectSettings" load_steps=2 format=3 uid="uid://ljvqs5iyg27y"]
+[gd_resource type="Resource" script_class="SoundEffectSettings" load_steps=3 format=3 uid="uid://ljvqs5iyg27y"]
 
 [ext_resource type="Script" uid="uid://ch3gbidg4jm3y" path="res://Code/Audio/Sound.gd" id="1_2i4j0"]
+[ext_resource type="AudioStream" uid="uid://dgclm4emf8r5p" path="res://Assets/Music/SoundEffects/Game_Start.mp3" id="2_h1vy1"]
 
 [resource]
 script = ExtResource("1_2i4j0")
-limit = 0
+limit = 1
 type = 3
-volume = 0
-pitch_scale = 1.0
-pitch_randomness = 0.0
+sound_effect = ExtResource("2_h1vy1")
+volume = 3
+pitch_scale = 0.5
 metadata/_custom_type_script = "uid://ch3gbidg4jm3y"

@@ -14,7 +14,6 @@ enum SOUND_EFFECT_TYPE {
 @export var sound_effect:AudioStreamMP3
 @export_range(-40,20) var volume = 0
 @export_range(0.0, 4.0, .01) var pitch_scale:float = 1.0
-@export_range(0.0, 1.0, .01) var pitch_randomness:float = 0.0
 var audio_count:int = 0
 
 func change_audio_count(amount:int)->void:
