@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://m30urp5ncljh"]
+
+[ext_resource type="Texture2D" uid="uid://c2xi18c53gvrq" path="res://Assets/Map/Player_Icon.png" id="1_tf7ed"]
+
+[node name="Character" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_tf7ed")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(8, 8)

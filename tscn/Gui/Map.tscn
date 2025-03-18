@@ -1,49 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctx1k861ia0mv"]
+[gd_scene load_steps=4 format=3 uid="uid://ctx1k861ia0mv"]
 
 [ext_resource type="Script" uid="uid://chchvq4ohpieh" path="res://Code/map.gd" id="1_ne5ws"]
 [ext_resource type="Texture2D" uid="uid://c4un7epftqk3b" path="res://Assets/Map/Map.png" id="1_rprr1"]
-[ext_resource type="Texture2D" uid="uid://c2xi18c53gvrq" path="res://Assets/Map/Player_Icon.png" id="2_tgbyx"]
-[ext_resource type="Script" uid="uid://bvoklt3nxo3d" path="res://Code/character_map.gd" id="3_q8suy"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ne5ws"]
-size = Vector2(10, 9.5)
+[ext_resource type="PackedScene" uid="uid://m30urp5ncljh" path="res://tscn/Gui/map_Character.tscn" id="3_ne5ws"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_ne5ws")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Static_Walls" type="StaticBody2D" parent="."]
 
-[node name="TextureRect" type="TextureRect" parent="StaticBody2D"]
+[node name="TextureRect" type="TextureRect" parent="Static_Walls"]
 offset_right = 512.0
 offset_bottom = 448.0
 texture = ExtResource("1_rprr1")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Static_Walls"]
 polygon = PackedVector2Array(128, 45.5, 172, 45.5, 172, 84, 156, 84, 156, 143.5, 176, 143.5, 176, 115.5, 208, 115.5, 208, 101.5, 256, 101.5, 256, 87.5, 272, 87.5, 272, 70, 236, 70, 236, 84, 192, 84, 192, 45.5, 204, 45.5, 204, 73, 224, 73, 224, 59, 336, 59, 336, 45.5, 380, 45.5, 380, 84, 336, 84, 336, 70, 284, 70, 284, 101.5, 332, 101.5, 332, 115.5, 380, 115.5, 380, 182, 364, 182, 364, 308, 348, 308, 348, 325.5, 364, 325.5, 364, 350, 304, 350, 304, 325.5, 316, 325.5, 316, 339.5, 336, 339.5, 336, 297.5, 352, 297.5, 352, 280, 300, 280, 300, 308, 284, 308, 284, 406, 272, 406, 272, 350, 272, 308, 256, 308, 256, 255.5, 300, 255.5, 300, 269.5, 352, 269.5, 352, 252, 320, 252, 320, 199.5, 332, 199.5, 332, 241.5, 352, 241.5, 352, 182, 336, 182, 336, 172, 368, 172, 368, 154, 336, 154, 336, 143, 368, 143, 368, 126, 320, 126, 320, 112, 300, 112, 300, 126, 288, 126, 288, 112, 220, 112, 220, 129.5, 268, 129.5, 268, 143.5, 316, 143.5, 316, 182, 300, 182, 300, 196, 256, 196, 256, 182, 240, 182, 240, 157, 256, 157, 256, 140, 220, 140, 220, 228, 236, 228, 236, 252, 172, 252, 172, 269.5, 236, 269.5, 236, 308, 220, 308, 220, 325.5, 236, 325.5, 236, 336, 220, 336, 220, 350, 144, 350, 144, 325.5, 188, 325.5, 188, 339.5, 208, 339.5, 208, 308, 176, 308, 176, 280, 140, 280, 140, 297.5, 156, 297.5, 156, 308, 128, 308, 128, 269.5, 160, 269.5, 160, 241.5, 208, 241.5, 208, 168, 188, 168, 188, 224, 176, 224, 176, 154, 156, 154, 156, 224, 140, 224, 140, 252, 128, 252, 128, 213.5, 144, 213.5, 144, 84, 128, 84, 128, 46, 124, 46, 124, 311, 140, 311, 140, 354, 268, 354, 268, 410, 288, 410, 288, 354, 368, 354, 368, 185, 384, 185, 384, 42, 124, 42, 124, 46)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Static_Walls"]
 polygon = PackedVector2Array(188, 126, 208, 126, 208, 157.5, 188, 157.5)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Static_Walls"]
 polygon = PackedVector2Array(188, 280, 224, 280, 224, 297.5, 188, 297.5)
 
-[node name="Character_Map" type="RigidBody2D" parent="."]
-position = Vector2(282, 396)
-script = ExtResource("3_q8suy")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Character_Map"]
-position = Vector2(-4, 4.75)
-shape = SubResource("RectangleShape2D_ne5ws")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Character_Map"]
-position = Vector2(-4, 4.75)
-shape = SubResource("RectangleShape2D_ne5ws")
-
-[node name="Sprite2D" type="Sprite2D" parent="Character_Map"]
-position = Vector2(-4, 5)
-scale = Vector2(3, 3)
-texture = ExtResource("2_tgbyx")
-
-[node name="Camera2D" type="Camera2D" parent="Character_Map"]
-position = Vector2(-4, 5)
-zoom = Vector2(10, 10)
+[node name="Character" parent="." instance=ExtResource("3_ne5ws")]
+position = Vector2(278, 400)

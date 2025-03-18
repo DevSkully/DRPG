@@ -30,6 +30,10 @@ window/size/viewport_height=448
 
 project/assembly_name="8-bit"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/level_block/plugin.cfg")
+
 [input]
 
 Up={

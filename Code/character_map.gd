@@ -1,1 +1,0 @@
-class_name CharMap extends RigidBody2D

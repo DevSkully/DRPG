@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c71yladfjhgud"]
+
+[ext_resource type="Texture2D" uid="uid://cxdf30dprpbrp" path="res://Assets/Map/TileSet_LevelBlock.png" id="1_mv5pn"]
+
+[resource]
+specular_mode = 2
+albedo_texture = ExtResource("1_mv5pn")
+metallic_specular = 0.0
+texture_filter = 0
