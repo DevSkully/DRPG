@@ -4,11 +4,13 @@ const TIME_TRAVEL := 0.3
 
 @onready var FrontRay = $Front
 @onready var BackRay = $Back
+@onready var PlayerCamera = $SubViewportContainer/SubViewport/Camera3D
+@onready var MapCamera = $Minimap/SubViewport/Camera3D
 
 var tween
 var currDirection
 
-func _physics_process(delta: float) -> void:
+func Input_3D_Movement()->void:
 	if tween is Tween:
 		if tween.is_running():
 			return
@@ -24,3 +26,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Right"):
 		tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 		tween.tween_property(self, "transform:basis", transform.basis.rotated(Vector3.UP , -PI / 2), TIME_TRAVEL)
+
+func _physics_process(delta: float) -> void:
+	Input_3D_Movement()
+	PlayerCamera.position = self.position
+	MapCamera.position = self.position
+	PlayerCamera.transform.basis = self.transform.basis

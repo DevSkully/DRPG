@@ -1,5 +1,6 @@
-res://tscn/Gui/character_information.tscn
-res://addons/level_block/default_material.tres
 res://tscn/main_menu.tscn
+res://addons/level_block/default_material.tres
 res://tscn/World.tscn
 res://tscn/3d_World.tscn
+res://tscn/Gui/character_information.tscn
+res://tscn/3d_Player.gd
