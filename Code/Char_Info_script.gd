@@ -3,7 +3,8 @@ extends Control
 
 ## -- Variables -- ##
 # - CHARACTER  REFERENCE- #
-@onready var Character:Stat
+@onready var knight = preload("res://tscn/Object/knight.tscn")
+@onready var Character:Stat 
 # - PORTRIAT - #
 @onready var Portait:TextureRect = $"Player-Portrait"
 # - LABELS - #
@@ -12,6 +13,10 @@ extends Control
 @onready var Magic :Label = $Magic_Label
 @onready var Shield:Label = $Shield_Label
 ## -- Functions -- ##
+# - READY - #
+func _ready()->void:
+	var init_Knight = knight.instantiate()
+	self._setCharacter(init_Knight)
 # - PLAYER - #
 func _setCharacter(newCharacter:Stat)->void:
 	self.Character = newCharacter

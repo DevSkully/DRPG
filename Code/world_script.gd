@@ -13,8 +13,6 @@ var init_rogue
 @onready var portrait = $Portait
 
 @onready var Char_info01:Control = $Character_Information
-@onready var Char_info02:Control = $Character_Information2
-@onready var Char_info03:Control = $Character_Information3
 
 ## -- Functinos -- ##
 func _ready() -> void:

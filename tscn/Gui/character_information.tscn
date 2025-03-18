@@ -12,8 +12,10 @@
 [node name="Character_Information" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 128.0
-offset_bottom = 96.0
+offset_left = 32.0
+offset_top = 320.0
+offset_right = 160.0
+offset_bottom = 416.0
 script = ExtResource("1_tltn6")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
