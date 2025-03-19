@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqneitwe3w4n4"]
+[gd_scene load_steps=3 format=3 uid="uid://dqneitwe3w4n4"]
 
 [ext_resource type="Script" uid="uid://cnrxhhxq1efvd" path="res://Code/Character_scripts/rogue.gd" id="1_rr2wk"]
+[ext_resource type="Texture2D" uid="uid://5ctqyho3esq8" path="res://Assets/Character-Portrait/Rogue.png" id="2_5yehx"]
 
 [node name="Rogue" type="Node"]
 script = ExtResource("1_rr2wk")
+Health = 70.0
+Attack = 12.0
+Magic = 8.0
+Sprite = ExtResource("2_5yehx")

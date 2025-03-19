@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://budhnvfocit8s"]
+[gd_scene load_steps=3 format=3 uid="uid://budhnvfocit8s"]
 
 [ext_resource type="Script" uid="uid://ra63uap2il30" path="res://Code/Character_scripts/wizard.gd" id="1_rk1do"]
+[ext_resource type="Texture2D" uid="uid://dpq4jxj0qidq7" path="res://Assets/Character-Portrait/Mage02.png" id="2_p2oao"]
 
 [node name="Wizard" type="Node"]
 script = ExtResource("1_rk1do")
+Health = 100.0
+Attack = 3.0
+Magic = 35.0
+Sprite = ExtResource("2_p2oao")

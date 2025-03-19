@@ -1,2 +1,4 @@
-res://tscn/3d_World.tscn
+res://tscn/Object/wizard.tscn
 res://addons/level_block/default_material.tres
+res://tscn/Object/rogue.tscn
+res://tscn/Gui/character_information.tscn

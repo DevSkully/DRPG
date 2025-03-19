@@ -12,10 +12,8 @@
 [node name="Character_Information" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 32.0
-offset_top = 320.0
-offset_right = 160.0
-offset_bottom = 416.0
+offset_right = 128.0
+offset_bottom = 96.0
 script = ExtResource("1_tltn6")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
@@ -28,9 +26,9 @@ mesh = SubResource("QuadMesh_onqtv")
 [node name="Player-Portrait" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 6.0
-offset_right = 38.0
-offset_bottom = 46.0
+offset_top = 10.0
+offset_right = 37.0
+offset_bottom = 47.0
 scale = Vector2(2, 2)
 
 [node name="Health" type="TextureRect" parent="."]
@@ -73,7 +71,6 @@ offset_right = 124.0
 offset_bottom = 19.0
 theme_override_fonts/font = ExtResource("7_kquwq")
 theme_override_font_sizes/font_size = 8
-text = "0"
 horizontal_alignment = 2
 
 [node name="Attack_Label" type="Label" parent="."]
@@ -84,7 +81,6 @@ offset_right = 124.0
 offset_bottom = 40.0
 theme_override_fonts/font = ExtResource("7_kquwq")
 theme_override_font_sizes/font_size = 8
-text = "0"
 horizontal_alignment = 2
 
 [node name="Magic_Label" type="Label" parent="."]
@@ -95,7 +91,6 @@ offset_right = 124.0
 offset_bottom = 62.0
 theme_override_fonts/font = ExtResource("7_kquwq")
 theme_override_font_sizes/font_size = 8
-text = "0"
 horizontal_alignment = 2
 
 [node name="Shield_Label" type="Label" parent="."]
@@ -106,5 +101,4 @@ offset_right = 124.0
 offset_bottom = 84.0
 theme_override_fonts/font = ExtResource("7_kquwq")
 theme_override_font_sizes/font_size = 8
-text = "0"
 horizontal_alignment = 2

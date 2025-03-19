@@ -4,11 +4,16 @@ const TIME_TRAVEL := 0.3
 
 @onready var FrontRay = $Front
 @onready var BackRay = $Back
-@onready var PlayerCamera = $SubViewportContainer/SubViewport/Camera3D
-@onready var MapCamera = $Minimap/SubViewport/Camera3D
+@onready var PlayerCamera = $Dungeon/SubViewport/Camera3D
+@onready var MapCamera = $SubViewportContainer/SubViewport/Camera3D
 
 var tween
 var currDirection
+
+func Camera_Position()->void:
+	PlayerCamera.position = self.position
+	MapCamera.position = Vector3(self.position.x,MapCamera.position.y,self.position.z)
+	PlayerCamera.transform.basis = self.transform.basis
 
 func Input_3D_Movement()->void:
 	if tween is Tween:
@@ -29,6 +34,4 @@ func Input_3D_Movement()->void:
 
 func _physics_process(delta: float) -> void:
 	Input_3D_Movement()
-	PlayerCamera.position = self.position
-	MapCamera.position = self.position
-	PlayerCamera.transform.basis = self.transform.basis
+	Camera_Position()
