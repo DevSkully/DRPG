@@ -1,14 +1,15 @@
-[gd_scene format=3 uid="uid://cpqxywnmt1pul"]
+[gd_scene load_steps=2 format=3 uid="uid://cpqxywnmt1pul"]
+
+[ext_resource type="Script" uid="uid://dbt3gawaa8qpv" path="res://Code/GUI_Scripts/Action_Picker.gd" id="1_x7hho"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 224.0
-offset_top = 320.0
-offset_right = -160.0
-offset_bottom = -80.0
+offset_right = -384.0
+offset_bottom = -400.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
+script = ExtResource("1_x7hho")

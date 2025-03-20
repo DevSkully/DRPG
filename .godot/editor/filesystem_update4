@@ -1,11 +1,4 @@
-res://tscn/Gui/CharSelect.tscn
-res://addons/level_block/default_material.tres
-res://tscn/Gui/char_select.gd
-res://Code/Management_Scripts/game_manager.gd
-res://tscn/main_menu.tscn
-res://Code/GUI_Scripts/Main_Menu_Script.gd
-res://tscn/3d_World.tscn
-res://tscn/Object/knight.tscn
-res://tscn/Object/player.tscn
-res://Code/world_script.gd
 res://tscn/Gui/Action_Picker_UI.tscn
+res://tscn/Object/knight.tscn
+res://tscn/Gui/CharSelect.tscn
+res://tscn/main_menu.tscn
