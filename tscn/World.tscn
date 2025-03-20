@@ -1,11 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6qp6jkl2s7gl"]
+[gd_scene load_steps=3 format=3 uid="uid://c6qp6jkl2s7gl"]
 
 [ext_resource type="Texture2D" uid="uid://bpcgg7qottuyj" path="res://Assets/Background/Game-Frame.png" id="1_4ivmp"]
-[ext_resource type="Script" uid="uid://by0jxgma7v872" path="res://Code/world_script.gd" id="1_rov87"]
 [ext_resource type="PackedScene" uid="uid://b0t57iwubfd1r" path="res://tscn/Gui/character_information.tscn" id="3_onqtv"]
 
 [node name="World" type="Node2D"]
-script = ExtResource("1_rov87")
 
 [node name="Background" type="Control" parent="."]
 layout_mode = 3

@@ -1,3 +1,6 @@
+TextureButton
+Button
+TextureRect
 LevelBlock
 Node3D
 OmniLight3D
@@ -7,8 +10,5 @@ SubViewportContainer
 MeshInstance3D
 Sprite2D
 GridMap
-TextureRect
 Control
 RayCast3D
-Camera2D
-Node2D

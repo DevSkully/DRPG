@@ -1,4 +1,14 @@
-res://tscn/Object/wizard.tscn
+res://tscn/main_menu.tscn
 res://addons/level_block/default_material.tres
-res://tscn/Object/rogue.tscn
+res://tscn/World.tscn
+res://tscn/3d_World.tscn
 res://tscn/Gui/character_information.tscn
+res://tscn/Object/rogue.tscn
+res://Code/Char_Info_script.gd
+res://Code/world_script.gd
+res://Code/game_manager.gd
+res://tscn/Object/player.tscn
+res://Code/Management_Scripts/signal_bus.gd
+res://Code/3d_Player.gd
+res://Code/Management_Scripts/game_manager.gd
+res://tscn/Gui/CharSelect.tscn

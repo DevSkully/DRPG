@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bv3hf2qdu6bxy"]
 
-[ext_resource type="Script" uid="uid://botg44cum27pb" path="res://tscn/3d_Player.gd" id="1_t40gn"]
+[ext_resource type="Script" uid="uid://botg44cum27pb" path="res://Code/3d_Player.gd" id="1_t40gn"]
 [ext_resource type="Texture2D" uid="uid://bmwvxmreeri1p" path="res://Assets/Background/Game-Frame02.png" id="2_xsgqg"]
 [ext_resource type="PackedScene" uid="uid://b0t57iwubfd1r" path="res://tscn/Gui/character_information.tscn" id="3_pm4cm"]
 

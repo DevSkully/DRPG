@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhs7ussvlxcas"]
+
+[ext_resource type="Texture2D" uid="uid://c31o4u8y5dc27" path="res://Assets/Map/Character Selection.png" id="1_fabo8"]
+
+[node name="Character_Selection" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+texture = ExtResource("1_fabo8")
+
+[node name="Knight_Button" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Mage_Button" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Rogue_Button" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,5 +1,7 @@
 extends Node3D
 
+signal Call_Character_Information
+
 const TIME_TRAVEL := 0.3
 
 @onready var FrontRay = $Front
@@ -7,8 +9,13 @@ const TIME_TRAVEL := 0.3
 @onready var PlayerCamera = $Dungeon/SubViewport/Camera3D
 @onready var MapCamera = $SubViewportContainer/SubViewport/Camera3D
 
+@onready var Char_Info = $GUI/Character_Information
+
 var tween
 var currDirection
+
+func _ready() -> void:
+	Call_Character_Information.emit(Char_Info)
 
 func Camera_Position()->void:
 	PlayerCamera.position = self.position

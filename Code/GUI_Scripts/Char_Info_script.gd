@@ -3,7 +3,6 @@ extends Control
 
 ## -- Variables -- ##
 # - CHARACTER  REFERENCE- #
-@onready var knight = preload("res://tscn/Object/knight.tscn")
 @onready var Character:Stat 
 # - PORTRIAT - #
 @onready var Portait:TextureRect = $"Player-Portrait"
@@ -13,10 +12,6 @@ extends Control
 @onready var Magic :Label = $Magic_Label
 @onready var Shield:Label = $Shield_Label
 ## -- Functions -- ##
-# - READY - #
-func _ready()->void:
-	var init_Knight = knight.instantiate()
-	self._setCharacter(init_Knight)
 # - PLAYER - #
 func _setCharacter(newCharacter:Stat)->void:
 	self.Character = newCharacter
@@ -25,14 +20,15 @@ func _getCharacter()->Stat:
 	return Character
 func _connect_character()->void:
 	Character.changeHealth.connect(health_label)
-	Health.text = str(int(round(Character.Health)))
 	Character.changeAttack.connect(attack_label)
-	Attack.text = str(int(round(Character.Attack)))
 	Character.changeMagic.connect(magic_label)
-	Magic.text = str(int(round(Character.Magic)))
 	Character.changeShield.connect(shield_label)
-	Shield.text = str(int(round(Character.Shield)))
 	change_portait(Character.get_texture())
+	# - INITIAL OF MAX TO MIN - #
+	Health.text = str(int(round(Character.Health)))
+	Attack.text = str(int(round(Character.Attack)))
+	Magic.text = str(int(round(Character.Magic)))
+	Shield.text = str(int(round(Character.Shield)))
 # - PORTRIAT - #
 func change_portait(newTexture)->void:
 	Portait.texture = newTexture

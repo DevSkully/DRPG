@@ -17,9 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameManager="*res://Code/game_manager.gd"
+GameManager="*res://Code/Management_Scripts/game_manager.gd"
 AudioManager="*res://tscn/UI/AudioManager.tscn"
-PlayerManager="*res://Code/player_manager.gd"
 Signal_Debugger="*res://addons/SignalVisualizer/Debugger/SignalDebugger.gd"
 
 [display]

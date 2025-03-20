@@ -1,5 +1,6 @@
-extends Node2D
+extends Node3D
 
+## -- Signal -- ##
 
 ## -- Variables -- ##
 # -  Character Information - #
@@ -11,13 +12,16 @@ var init_wizard
 var init_rogue
 
 @onready var portrait = $Portait
-
-@onready var Char_info01:Control = $Character_Information
+var CharInformation:Character_Info
 
 ## -- Functinos -- ##
 func _ready() -> void:
+	print("ready")
 	init_Knight = knight.instantiate()
-	Char_info01._setCharacter(init_Knight)
+	CharInformation._setCharacter(init_Knight)
+
+func _onCall_CharacterInfo(node:Character_Info)->void:
+	CharInformation = node
 
 func _process(delta: float) -> void:
 	pass
