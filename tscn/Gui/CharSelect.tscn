@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhs7ussvlxcas"]
+[gd_scene load_steps=11 format=3 uid="uid://bhs7ussvlxcas"]
 
 [ext_resource type="Texture2D" uid="uid://c31o4u8y5dc27" path="res://Assets/Map/Character Selection.png" id="1_fabo8"]
+[ext_resource type="Script" uid="uid://ch4grtnej4kwd" path="res://tscn/Gui/char_select.gd" id="1_xq814"]
+[ext_resource type="Texture2D" uid="uid://cbqlpfk0rt2b0" path="res://Assets/Icons&Buttons/Knight-Character-Button1.png" id="2_knvgs"]
+[ext_resource type="Texture2D" uid="uid://dgtako2i0ogl" path="res://Assets/Icons&Buttons/Knight-Character-Button3.png" id="3_xq814"]
+[ext_resource type="Texture2D" uid="uid://75jygnrciwms" path="res://Assets/Icons&Buttons/Knight-Character-Button2.png" id="4_auqid"]
+[ext_resource type="Texture2D" uid="uid://bgn62oaoxabwg" path="res://Assets/Icons&Buttons/Mage-Character-Button1.png" id="5_wle8g"]
+[ext_resource type="Texture2D" uid="uid://cie3peymv0ebl" path="res://Assets/Icons&Buttons/Mage-Character-Button3.png" id="6_7opuy"]
+[ext_resource type="PackedScene" uid="uid://b26ht5t6egl3w" path="res://tscn/Object/knight.tscn" id="6_wle8g"]
+[ext_resource type="PackedScene" uid="uid://budhnvfocit8s" path="res://tscn/Object/wizard.tscn" id="7_7opuy"]
+[ext_resource type="Texture2D" uid="uid://dciplniy4y86r" path="res://Assets/Icons&Buttons/Mage-Character-Button2.png" id="7_lo3or"]
 
 [node name="Character_Selection" type="Node2D"]
+script = ExtResource("1_xq814")
+arr_normal = Array[Texture]([ExtResource("2_knvgs"), ExtResource("5_wle8g")])
+arr_hover = Array[Texture]([ExtResource("4_auqid"), ExtResource("7_lo3or")])
+Character = Array[Resource]([ExtResource("6_wle8g"), ExtResource("7_7opuy")])
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -11,13 +24,21 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_fabo8")
 
 [node name="Knight_Button" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 64.0
+offset_top = 160.0
+offset_right = 144.0
+offset_bottom = 224.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_knvgs")
+texture_pressed = ExtResource("3_xq814")
+texture_hover = ExtResource("4_auqid")
 
 [node name="Mage_Button" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Rogue_Button" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 288.0
+offset_top = 160.0
+offset_right = 368.0
+offset_bottom = 224.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_wle8g")
+texture_pressed = ExtResource("6_7opuy")
+texture_hover = ExtResource("7_lo3or")

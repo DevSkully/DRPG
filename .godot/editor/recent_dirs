@@ -1,9 +1,10 @@
+res://tscn/Gui
+res://tscn/Object
+res://Assets/Character-Portrait
+res://Code/Enemy
 res://tscn
 res://Code
-res://tscn/Object
 res://Assets/Map
-res://tscn/Gui
 res://tscn/UI
 res://Assets/Music/SoundEffects
-res://Assets/Character-Portrait
 res://Assets/FONTS
