@@ -1,6 +1,6 @@
-res://tscn/Object/player.tscn
-res://addons/level_block/default_material.tres
-res://tscn/Enemy/Temp_Enemy.tscn
-res://Code/Enemy/Enemy.gd
 res://tscn/3d_World.tscn
-res://Code/3d_Player.gd
+res://addons/level_block/default_material.tres
+res://tscn/Object/player.tscn
+res://tscn/Gui/Action_Picker_UI.tscn
+res://tscn/Gui/CharSelect.tscn
+res://Code/GUI_Scripts/Action_Picker.gd

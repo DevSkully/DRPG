@@ -1,6 +1,9 @@
 extends Node
 
 var rng:RandomNumberGenerator
+var Player:Player3D : set = setPlayer
+func setPlayer(new_value)->void:
+	Player = new_value
 var Character
 
 const enemy_array = {

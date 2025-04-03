@@ -14,6 +14,7 @@ var tween
 var currDirection
 
 func _ready() -> void:
+	GameManager.setPlayer(self)
 	Call_Character_Information.emit(Char_Info)
 
 func Camera_Position()->void:
