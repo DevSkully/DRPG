@@ -19,7 +19,6 @@ func _ready() -> void:
 
 func Camera_Position()->void:
 	PlayerCamera.position = self.position
-	MapCamera.position = Vector3(self.position.x,MapCamera.position.y,self.position.z)
 	PlayerCamera.transform.basis = self.transform.basis
 
 func Input_3D_Movement()->void:
@@ -38,6 +37,14 @@ func Input_3D_Movement()->void:
 	if Input.is_action_just_pressed("Right"):
 		tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 		tween.tween_property(self, "transform:basis", transform.basis.rotated(Vector3.UP , -PI / 2), TIME_TRAVEL)
+
+func vertical_movement(num:int)->void:
+	tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "transform", transform.translated((num*transform.basis.z) * 2), TIME_TRAVEL)
+
+func horizontal_movement(num:int)->void:
+	tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "transform", transform.basis.rotated(Vector3.UP,(num*PI)/2), TIME_TRAVEL)
 
 func _physics_process(delta: float) -> void:
 	Input_3D_Movement()

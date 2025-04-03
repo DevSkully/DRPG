@@ -1,2 +1,2 @@
-﻿50123
-C:/Users/samae/OneDrive/Desktop/Godot_v4.4-stable_mono_win64/Godot_v4.4-stable_mono_win64.exe
+﻿38909
+/usr/lib/godot-mono/godot.linuxbsd.editor.x86_64.mono

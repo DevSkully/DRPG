@@ -8,14 +8,21 @@ var arr_buttons:Array[TextureButton]
 
 var currIndex:int = 0
 var tween
+
 func _ready() -> void:
 	for button in get_children():
 		if button is TextureButton:
-			print("Found: ", button.name)
+			button.mouse_entered.connect(hover.bind(button))
+			button.mouse_exited.connect(hover.bind(button))
 			arr_buttons.append(button)
 	_select_Button(0)
 
 func _select_Button(index:int)->void:
+	if currIndex + index >= 2 or currIndex - index <= -2:
+		return
+	else:
+		print("curr_Index: ", currIndex, " Index: ", index )
+	
 	var previous_button = arr_buttons[currIndex]
 	var current_button = arr_buttons[currIndex + index]
 	previous_button.set_texture_normal(arr_normal[currIndex])
@@ -34,3 +41,6 @@ func _process(delta: float) -> void:
 		_select_Button(-1)
 	if Input.is_action_just_pressed("Start"):
 		on_press()
+
+func hover(button:TextureButton)->void:
+	print(button.name)

@@ -1,3 +1,4 @@
+OmniLight3D
 TextureRect
 Sprite3D
 Node3D
@@ -5,7 +6,6 @@ MeshInstance3D
 TextureButton
 Button
 LevelBlock
-OmniLight3D
 Camera3D
 SubViewport
 SubViewportContainer

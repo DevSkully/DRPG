@@ -1,4 +1,7 @@
-res://tscn/Gui/Action_Picker_UI.tscn
-res://tscn/Object/knight.tscn
 res://tscn/Gui/CharSelect.tscn
+res://tscn/Gui/char_select.gd
+res://Code/GUI_Scripts/Character_Button.gd
 res://tscn/main_menu.tscn
+res://tscn/Object/player.tscn
+res://Code/Management_Scripts/game_manager.gd
+res://tscn/Gui/Action_Picker_UI.tscn
