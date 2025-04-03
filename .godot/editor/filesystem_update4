@@ -1,7 +1,6 @@
-res://tscn/Gui/CharSelect.tscn
-res://tscn/Gui/char_select.gd
-res://Code/GUI_Scripts/Character_Button.gd
-res://tscn/main_menu.tscn
 res://tscn/Object/player.tscn
-res://Code/Management_Scripts/game_manager.gd
-res://tscn/Gui/Action_Picker_UI.tscn
+res://addons/level_block/default_material.tres
+res://tscn/Enemy/Temp_Enemy.tscn
+res://Code/Enemy/Enemy.gd
+res://tscn/3d_World.tscn
+res://Code/3d_Player.gd

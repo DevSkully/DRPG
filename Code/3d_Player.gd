@@ -1,4 +1,4 @@
-extends Node3D
+class_name Player3D extends Node3D
 
 signal Call_Character_Information
 
@@ -7,7 +7,6 @@ const TIME_TRAVEL := 0.3
 @onready var FrontRay = $Front
 @onready var BackRay = $Back
 @onready var PlayerCamera = $Dungeon/SubViewport/Camera3D
-@onready var MapCamera = $SubViewportContainer/SubViewport/Camera3D
 
 @onready var Char_Info = $GUI/Character_Information
 
@@ -26,17 +25,13 @@ func Input_3D_Movement()->void:
 		if tween.is_running():
 			return
 	if Input.is_action_just_pressed("Up") and not FrontRay.is_colliding():
-		tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-		tween.tween_property(self, "transform", transform.translated(-transform.basis.z * 2), TIME_TRAVEL)
+		vertical_movement(-1)
 	if Input.is_action_just_pressed("Down") and not BackRay.is_colliding():
-		tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-		tween.tween_property(self, "transform", transform.translated(transform.basis.z * 2), TIME_TRAVEL)
+		vertical_movement(1)
 	if Input.is_action_just_pressed("Left"):
-		tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-		tween.tween_property(self, "transform:basis", transform.basis.rotated(Vector3.UP , PI / 2), TIME_TRAVEL)
+		horizontal_movement(1)
 	if Input.is_action_just_pressed("Right"):
-		tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-		tween.tween_property(self, "transform:basis", transform.basis.rotated(Vector3.UP , -PI / 2), TIME_TRAVEL)
+		horizontal_movement(-1)
 
 func vertical_movement(num:int)->void:
 	tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
@@ -44,7 +39,7 @@ func vertical_movement(num:int)->void:
 
 func horizontal_movement(num:int)->void:
 	tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	tween.tween_property(self, "transform", transform.basis.rotated(Vector3.UP,(num*PI)/2), TIME_TRAVEL)
+	tween.tween_property(self, "transform:basis", transform.basis.rotated(Vector3.UP,(num*PI)/2), TIME_TRAVEL)
 
 func _physics_process(delta: float) -> void:
 	Input_3D_Movement()

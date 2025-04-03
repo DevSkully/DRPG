@@ -4,12 +4,10 @@ class_name Enemy extends Stat
 signal On_Action
 signal Face_Direction
 ## -- VARIABLES -- ##
-@export var Detection: Area2D
+@export var EnemySprite:Texture : set=setEnemySprite
+func setEnemySprite(new_value)->void:
+	EnemySprite = new_value
 ## -- FUNCTIONS -- ##
-func create_sprite3d(newTexture:Texture)->Sprite3D:
-	var Enemy_Sprite = Sprite3D.new()
-	Enemy_Sprite.texture = newTexture
-	return Enemy_Sprite
 func _ready() -> void:
 	pass
 func Get_Player()->void:

@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://ydcbhtfofhmf"]
+[gd_scene load_steps=11 format=3 uid="uid://ydcbhtfofhmf"]
 
 [ext_resource type="Script" uid="uid://c0fn78275nauh" path="res://addons/level_block/level_block_node.gd" id="1_0isg3"]
 [ext_resource type="Script" uid="uid://by0jxgma7v872" path="res://Code/world_script.gd" id="1_aoi3g"]
+[ext_resource type="Script" uid="uid://bf8w46q1ms01s" path="res://Code/Enemy/SpawnRooms.gd" id="2_f0soa"]
 [ext_resource type="Material" uid="uid://c71yladfjhgud" path="res://addons/level_block/default_material.tres" id="2_i2v1k"]
 [ext_resource type="Texture2D" uid="uid://cxdf30dprpbrp" path="res://Assets/Map/TileSet_LevelBlock.png" id="3_a7r66"]
 [ext_resource type="PackedScene" uid="uid://bv3hf2qdu6bxy" path="res://tscn/Object/player.tscn" id="4_a7r66"]
 [ext_resource type="Texture2D" uid="uid://c4un7epftqk3b" path="res://Assets/Map/Map.png" id="7_f0soa"]
+[ext_resource type="PackedScene" uid="uid://qlfq5rp3ugty" path="res://tscn/Enemy/Temp_Enemy.tscn" id="8_qwr20"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0soa"]
 albedo_texture = ExtResource("7_f0soa")
@@ -20,6 +22,7 @@ center_offset = Vector3(-2.8, -4.8, 0)
 script = ExtResource("1_aoi3g")
 
 [node name="Rooms" type="Node3D" parent="."]
+script = ExtResource("2_f0soa")
 
 [node name="Room1" type="Node3D" parent="Rooms"]
 
@@ -2054,5 +2057,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -2, 8.74228e-08)
 layers = 2
 mesh = SubResource("QuadMesh_qwr20")
+
+[node name="TempEnemy" parent="." instance=ExtResource("8_qwr20")]
 
 [connection signal="Call_Character_Information" from="Player" to="." method="_onCall_CharacterInfo"]
