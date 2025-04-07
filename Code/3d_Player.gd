@@ -16,6 +16,7 @@ var currDirection
 func _ready() -> void:
 	GameManager.setPlayer(self)
 	Call_Character_Information.emit(Char_Info)
+	SignalBus.on_player_action_update.connect(SignalBus.update_emit)
 
 func Camera_Position()->void:
 	PlayerCamera.position = self.position
@@ -27,12 +28,16 @@ func Input_3D_Movement()->void:
 			return
 	if Input.is_action_just_pressed("Up") and not FrontRay.is_colliding():
 		vertical_movement(-1)
+		SignalBus.movement_update(0)
 	if Input.is_action_just_pressed("Down") and not BackRay.is_colliding():
 		vertical_movement(1)
+		SignalBus.movement_update(1)
 	if Input.is_action_just_pressed("Left"):
 		horizontal_movement(1)
+		SignalBus.movement_update(2)
 	if Input.is_action_just_pressed("Right"):
 		horizontal_movement(-1)
+		SignalBus.movement_update(3)
 
 func vertical_movement(num:int)->void:
 	tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
