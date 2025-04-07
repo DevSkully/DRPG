@@ -1,9 +1,12 @@
-res://tscn/Object/player.tscn
-res://addons/level_block/default_material.tres
-res://Code/GUI_Scripts/Action_Picker.gd
 res://tscn/3d_World.tscn
+res://addons/level_block/default_material.tres
+res://tscn/Object/player.tscn
 res://tscn/Gui/Action_Picker_UI.tscn
 res://tscn/Gui/CharSelect.tscn
 res://tscn/main_menu.tscn
+res://Code/GUI_Scripts/Action_Picker.gd
 res://Code/3d_Player.gd
-res://Code/Management_Scripts/signal_bus.gd
+res://tscn/Enemy/Small_Enemy.tscn
+res://tscn/Enemy/Temp_Enemy.tscn
+res://Code/Enemy/SpawnRooms.gd
+res://Code/Enemy/Enemy.gd

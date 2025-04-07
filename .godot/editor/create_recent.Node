@@ -1,9 +1,9 @@
+CollisionShape3D
+Area3D
 Control
 TextureRect
 TextureButton
 RayCast3D
-CollisionShape3D
-Area3D
 MeshInstance3D
 OmniLight3D
 Sprite3D
@@ -12,4 +12,3 @@ Button
 LevelBlock
 Camera3D
 SubViewport
-SubViewportContainer

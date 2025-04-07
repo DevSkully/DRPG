@@ -19,7 +19,7 @@ func leftButton_Pressed()->void:
 
 func texture_button_modulate(button:TextureButton)->void:
 	button.set_modulate(Color(1,1,1,0.75))
-	get_parent().create_timer(1).timeout
+	await get_tree().create_timer(0.2).timeout
 	button.set_modulate(Color(1,1,1,1))
 
 func _ready() -> void:

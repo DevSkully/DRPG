@@ -34,10 +34,10 @@ func Input_3D_Movement()->void:
 		SignalBus.movement_update(1)
 	if Input.is_action_just_pressed("Left"):
 		horizontal_movement(1)
-		SignalBus.movement_update(2)
+		SignalBus.movement_update(3)
 	if Input.is_action_just_pressed("Right"):
 		horizontal_movement(-1)
-		SignalBus.movement_update(3)
+		SignalBus.movement_update(2)
 
 func vertical_movement(num:int)->void:
 	tween = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
