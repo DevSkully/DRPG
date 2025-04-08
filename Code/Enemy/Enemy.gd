@@ -13,4 +13,5 @@ func _ready() -> void:
 	pass
 
 func player_collision(area:Area3D)->void:
+	#TODO: start arena / battle scene
 	print("Collision with Player: ", area.name)

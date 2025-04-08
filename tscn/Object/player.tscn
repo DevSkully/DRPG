@@ -64,7 +64,7 @@ far = 100.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Dungeon/SubViewport/Camera3D"]
 
-[node name="Control" parent="." instance=ExtResource("4_xsgqg")]
+[node name="ActionPicker" parent="." instance=ExtResource("4_xsgqg")]
 offset_left = 224.0
 offset_top = 320.0
 offset_right = -160.0

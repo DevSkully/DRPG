@@ -1,10 +1,15 @@
 extends Node
 
 var rng:RandomNumberGenerator
+var Character
+
+var inWorld:bool : set=SetInWorld
+func SetInWorld(new_value:bool)->void:
+	inWorld = new_value
+
 var Player:Player3D : set = setPlayer
 func setPlayer(new_value)->void:
 	Player = new_value
-var Character
 
 const enemy_array = {
 	Small = "",
@@ -25,6 +30,7 @@ func set_Character(newResource:String)->void:
 	Character = load(newResource)
 
 func _inst_World()->PackedScene:
+	SetInWorld(true)
 	return load("res://tscn/3d_World.tscn")
 
 func Character_Selection_Window()->PackedScene:
@@ -32,6 +38,10 @@ func Character_Selection_Window()->PackedScene:
 
 func _inst_Pause()->PackedScene:
 	return null
+
+func battle_scene()->PackedScene:
+	SetInWorld(false)
+	return load("res://tscn/instance_scene/BattleScene.tscn")
 
 func _process(delta: float) -> void:
 	pass

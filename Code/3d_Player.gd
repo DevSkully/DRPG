@@ -7,6 +7,7 @@ const TIME_TRAVEL := 0.3
 @onready var FrontRay = $Front
 @onready var BackRay = $Back
 @onready var PlayerCamera = $Dungeon/SubViewport/Camera3D
+@onready var ActionUI = $ActionPicker
 
 @onready var Char_Info = $GUI/Character_Information
 
