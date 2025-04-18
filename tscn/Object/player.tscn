@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv3hf2qdu6bxy"]
+[gd_scene load_steps=7 format=3 uid="uid://bv3hf2qdu6bxy"]
 
 [ext_resource type="Script" uid="uid://botg44cum27pb" path="res://Code/3d_Player.gd" id="1_t40gn"]
 [ext_resource type="Texture2D" uid="uid://bmwvxmreeri1p" path="res://Assets/Background/Game-Frame02.png" id="2_xsgqg"]
 [ext_resource type="PackedScene" uid="uid://b0t57iwubfd1r" path="res://tscn/Gui/character_information.tscn" id="3_pm4cm"]
 [ext_resource type="PackedScene" uid="uid://cpqxywnmt1pul" path="res://tscn/Gui/Action_Picker_UI.tscn" id="4_xsgqg"]
+[ext_resource type="PackedScene" uid="uid://cw3p86vrgm8pc" path="res://tscn/Gui/inventory.tscn" id="5_pm4cm"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xsgqg"]
 
@@ -69,3 +70,5 @@ offset_left = 224.0
 offset_top = 320.0
 offset_right = -160.0
 offset_bottom = -80.0
+
+[node name="Inventory" parent="." instance=ExtResource("5_pm4cm")]

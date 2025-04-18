@@ -21,6 +21,7 @@ GameManager="*res://Code/Management_Scripts/game_manager.gd"
 AudioManager="*res://tscn/UI/AudioManager.tscn"
 Signal_Debugger="*res://addons/SignalVisualizer/Debugger/SignalDebugger.gd"
 SignalBus="*res://Code/Management_Scripts/signal_bus.gd"
+ItemManager="*res://Code/Management_Scripts/item_manager.gd"
 
 [display]
 

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw3p86vrgm8pc"]
+
+[ext_resource type="Script" uid="uid://ianlu0ib874o" path="res://Code/Character_scripts/inventory.gd" id="1_7mvgg"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 156.0
+offset_top = 32.0
+offset_right = 356.0
+offset_bottom = 232.0
+script = ExtResource("1_7mvgg")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 200.0
+
+[connection signal="item_selected" from="ItemList" to="." method="item_list_selected"]

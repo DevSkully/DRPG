@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpqxywnmt1pul"]
+[gd_scene load_steps=7 format=3 uid="uid://cpqxywnmt1pul"]
 
 [ext_resource type="Script" uid="uid://dbt3gawaa8qpv" path="res://Code/GUI_Scripts/Action_Picker.gd" id="1_x7hho"]
 [ext_resource type="Texture2D" uid="uid://d0n1mvpttu2bj" path="res://Assets/Icons&Buttons/D-Pad_Up.png" id="2_g6skk"]
 [ext_resource type="Texture2D" uid="uid://e4m5lkxqsw2k" path="res://Assets/Icons&Buttons/D-Pad_Down.png" id="3_li5gw"]
 [ext_resource type="Texture2D" uid="uid://q2karmyrjih" path="res://Assets/Icons&Buttons/D-Pad_Right.png" id="4_cvplj"]
 [ext_resource type="Texture2D" uid="uid://dbg56jgqq4mok" path="res://Assets/Icons&Buttons/D-Pad_Left.png" id="5_yvy56"]
+[ext_resource type="Texture2D" uid="uid://b1hxpl2c5ree7" path="res://Assets/Icons&Buttons/Bag_Icon1.png" id="6_yvy56"]
 
 [node name="ActionPicker" type="Control"]
 layout_mode = 3
@@ -54,6 +55,14 @@ offset_right = 16.0
 offset_bottom = 32.0
 texture_normal = ExtResource("5_yvy56")
 
+[node name="Item_Button" type="TextureButton" parent="Base_with_Controls"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 8.0
+offset_right = 96.0
+offset_bottom = 40.0
+texture_normal = ExtResource("6_yvy56")
+
 [node name="BattleScene" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
@@ -63,3 +72,4 @@ offset_bottom = 40.0
 [connection signal="pressed" from="Base_with_Controls/Down_Button" to="." method="downButton_Pressed"]
 [connection signal="pressed" from="Base_with_Controls/Right_Button" to="." method="rightButton_Pressed"]
 [connection signal="pressed" from="Base_with_Controls/Left_Button" to="." method="leftButton_Pressed"]
+[connection signal="pressed" from="Base_with_Controls/Item_Button" to="." method="ItemButton_Pressed"]

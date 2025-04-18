@@ -2,6 +2,8 @@ class_name Signal_Bus extends Node
 
 signal on_player_action_update(int)
 
+signal notification_gate(player:Variant, _Gate:Variant)
+
 var player_graphic_user_interface : set = set_gui
 func set_gui(new_value:Action_Picker)->void:
 	player_graphic_user_interface = new_value
@@ -14,3 +16,6 @@ func movement_disconnect()->void:
 
 func update_emit(value:int)->void:
 	player_graphic_user_interface.texture_button_modulate(player_graphic_user_interface.Base_Controls_children[value])
+
+func system_on_press_update(value:bool)->void:
+	player_graphic_user_interface.item_button_modulate(value)

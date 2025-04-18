@@ -1,6 +1,7 @@
 res://Code/Management_Scripts
-res://Code/Enemy
 res://tscn/Gui
+res://Assets/FONTS
+res://Code/Enemy
 res://tscn/Object
 res://Assets/Character-Portrait
 res://tscn
@@ -8,4 +9,3 @@ res://Code
 res://Assets/Map
 res://tscn/UI
 res://Assets/Music/SoundEffects
-res://Assets/FONTS

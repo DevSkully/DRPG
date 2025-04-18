@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyvpanoktx2y1"]
+
+[ext_resource type="Script" uid="uid://3pjc7s5a03t8" path="res://Customizable_Objects/item/key.gd" id="1_syyka"]
+[ext_resource type="Texture2D" uid="uid://dcldbfjdj3udq" path="res://Assets/Items/key.png" id="2_uxrut"]
+
+[node name="Key" type="Node"]
+script = ExtResource("1_syyka")
+item_name = "Key"
+image = ExtResource("2_uxrut")
+metadata/_custom_type_script = "uid://f8dr0yqlg05n"

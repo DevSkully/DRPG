@@ -1,9 +1,6 @@
-res://tscn/3d_World.tscn
+res://tscn/Gui/inventory.tscn
 res://addons/level_block/default_material.tres
+res://Code/Character_scripts/inventory.gd
+res://tscn/3d_World.tscn
 res://tscn/Object/player.tscn
-res://tscn/Enemy/Temp_Enemy.tscn
-res://tscn/instance_scene/BattleScene.tscn
-res://tscn/Gui/Action_Picker_UI.tscn
-res://Customizable_Objects/Gate/Gate.gd
 res://tscn/Gui/Gate.tscn
-res://tscn/Gui/gate.gd
