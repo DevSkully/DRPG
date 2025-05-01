@@ -18,4 +18,4 @@ func _init(val_name:String, val_icon:Texture2D) -> void:
 	icon = val_icon
 
 func _to_string() -> String:
-	return item_name + '-' + str(count)
+	return item_name + ' - ' + str(count)

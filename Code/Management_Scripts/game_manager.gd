@@ -15,6 +15,10 @@ var Key:Variant : set=setKey
 func setKey(new_value:Variant)->void:
 	Key=new_value
 
+var _gate:gate : set=set_gate
+func set_gate(new_value:gate)->void:
+	_gate = new_value
+
 enum notification_state {
 	_Gate=0, 
 	_Enemy=1
@@ -46,6 +50,15 @@ func battle_scene()->PackedScene:
 
 func show_notification()->PackedScene:
 	return load("res://tscn/Gui/notification.tscn")
+
+func pause()->void:
+	if get_tree() is SceneTree:
+		get_tree().paused = true
+	pass
+
+func resume()->void:
+	if get_tree() is SceneTree:
+		get_tree().paused = false
 
 func _process(delta: float) -> void:
 	pass

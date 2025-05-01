@@ -14,10 +14,13 @@ material = SubResource("StandardMaterial3D_n7os6")
 [node name="Gate" type="Node3D"]
 script = ExtResource("1_vimiy")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 1)
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, 0)
 mesh = SubResource("QuadMesh_4k5xd")
-skeleton = NodePath("../StaticBody3D")
+skeleton = NodePath("../../StaticBody3D")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
