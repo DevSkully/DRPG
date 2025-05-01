@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ydcbhtfofhmf"]
+[gd_scene load_steps=11 format=3 uid="uid://ydcbhtfofhmf"]
 
 [ext_resource type="Script" uid="uid://c0fn78275nauh" path="res://addons/level_block/level_block_node.gd" id="1_0isg3"]
 [ext_resource type="Script" uid="uid://by0jxgma7v872" path="res://Code/world_script.gd" id="1_aoi3g"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bv3hf2qdu6bxy" path="res://tscn/Object/player.tscn" id="4_a7r66"]
 [ext_resource type="Texture2D" uid="uid://c4un7epftqk3b" path="res://Assets/Map/Map.png" id="7_f0soa"]
 [ext_resource type="PackedScene" uid="uid://b3srqij4slptl" path="res://tscn/Gui/Gate.tscn" id="7_qwr20"]
+[ext_resource type="PackedScene" uid="uid://bd52gwavxgwo2" path="res://test.tscn" id="8_qwr20"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0soa"]
 albedo_texture = ExtResource("7_f0soa")
@@ -2058,5 +2059,8 @@ mesh = SubResource("QuadMesh_qwr20")
 
 [node name="Gate" parent="." instance=ExtResource("7_qwr20")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4, 0, 12)
+
+[node name="Test" parent="." instance=ExtResource("8_qwr20")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2, 0, 16)
 
 [connection signal="Call_Character_Information" from="Player" to="." method="_onCall_CharacterInfo"]

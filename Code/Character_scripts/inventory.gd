@@ -1,28 +1,29 @@
 class_name Inventory extends Control
 
+signal get_item(Callable)
+
 @onready var arr:Array[Item]
 @onready var item_list:ItemList = $ItemList
 
 func _ready() -> void:
-	for list in range(5):
-		var new_item = ItemManager.get_random_item()
-		#TODO: check if item is existing in the array ???
-		if arr.size()<=0:
-			new_item.add_count()
-			arr.append(new_item)
-		else:
-			
-			print('item:',new_item.item_name,' - copy:',check_item(new_item))
-			arr.append(new_item)
-	
 	show_item()
 
-func check_item(item:Item)->bool:
-	return true if arr.bsearch(item.item_name)==0 else false
-
+## CHECK FOR DUPLICANT
+func check(item:Item)->bool:
+	for x in arr:
+		if x.item_name == item.item_name:
+			x.add_count()
+			return true
+	return false
+## ITEM ADDING IN THE ARRAY
 func add_item(item:Item)->void:
-	pass
-
+	if arr.size() <= 0:
+		item.add_count()
+		arr.append(item)
+	if !check(item):
+		item.add_count()
+		arr.append(item)
+## SHOW ARRAY:VARIANT = ITEM_LIST
 func show_item()->void:
 	for item in arr:
 		item_list.add_item(item.to_string(),item.icon)

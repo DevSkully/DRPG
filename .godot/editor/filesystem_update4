@@ -1,6 +1,5 @@
-res://tscn/Gui/inventory.tscn
-res://addons/level_block/default_material.tres
-res://Code/Character_scripts/inventory.gd
 res://tscn/3d_World.tscn
+res://addons/level_block/default_material.tres
 res://tscn/Object/player.tscn
-res://tscn/Gui/Gate.tscn
+res://tscn/UI/Message_Analog.tscn
+res://Code/Message_Code/message_analog.gd

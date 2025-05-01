@@ -1,3 +1,6 @@
+res://tscn/UI
+res://Code/Message_Code
+res://
 res://Code/Management_Scripts
 res://tscn/Gui
 res://Assets/FONTS
@@ -7,5 +10,4 @@ res://Assets/Character-Portrait
 res://tscn
 res://Code
 res://Assets/Map
-res://tscn/UI
 res://Assets/Music/SoundEffects

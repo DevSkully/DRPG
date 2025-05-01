@@ -14,6 +14,9 @@ const TIME_TRAVEL := 0.3
 var tween
 var currDirection
 
+var inst_notification
+var has_notification:bool = false
+
 func _ready() -> void:
 	_Inventory.visible = false
 	GameManager.setPlayer(self)
@@ -55,15 +58,19 @@ func horizontal_movement(num:int)->void:
 
 func notification_open_gate(gate_value:Variant)->void:
 	#TODO: pause the game-sate and return a notification window if player wants to open gate or not!
-	var inst_gate = GameManager.show_notification().instantiate()
-	inst_gate.setPlayer(self)
-	inst_gate.set_gate(gate_value)
-	self.add_child(inst_gate)
+	inst_notification = GameManager.show_notification().instantiate()
+	inst_notification.setPlayer(self)
+	inst_notification.set_gate(gate_value)
+	self.add_child(inst_notification)
 
 func _physics_process(delta: float) -> void:
 	if FrontRay.is_colliding():
-		if FrontRay.get_collider().name == 'Gate':
+		if FrontRay.get_collider().name == 'Gate' && not has_notification:
+			has_notification = true
 			notification_open_gate(FrontRay.get_collider())
+	else:
+		if has_notification:
+			has_notification = false
 	if Input.is_action_just_pressed("Select"):
 		show_inventory(true if not _Inventory.visible else false)
 	Input_3D_Movement()
