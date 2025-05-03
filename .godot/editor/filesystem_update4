@@ -2,4 +2,4 @@ res://tscn/3d_World.tscn
 res://addons/level_block/default_material.tres
 res://tscn/Object/player.tscn
 res://tscn/UI/Message_Analog.tscn
-res://Code/Message_Code/message_analog.gd
+res://tscn/Gui/notification.tscn

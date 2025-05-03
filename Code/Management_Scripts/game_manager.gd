@@ -51,6 +51,9 @@ func battle_scene()->PackedScene:
 func show_notification()->PackedScene:
 	return load("res://tscn/Gui/notification.tscn")
 
+func dialog()->PackedScene:
+	return load("res://tscn/UI/Message_Analog.tscn")
+
 func pause()->void:
 	if get_tree() is SceneTree:
 		get_tree().paused = true
