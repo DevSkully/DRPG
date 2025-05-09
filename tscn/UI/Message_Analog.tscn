@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://yy5jv86wp3sy" path="res://Code/Message_Code/Reader.gd" id="3_n3ip6"]
 
 [node name="Message_Analog" type="Control"]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

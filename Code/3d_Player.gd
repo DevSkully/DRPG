@@ -22,6 +22,13 @@ func _ready() -> void:
 	GameManager.setPlayer(self)
 	Call_Character_Information.emit(Char_Info)
 	SignalBus.on_player_action_update.connect(SignalBus.update_emit)
+	self.add_child(self_dialog('m.person'))
+	
+
+func self_dialog(value:String)->DialogManager:
+	var new_dialog:DialogManager = GameManager.dialog().instantiate()
+	new_dialog.get_dialog(value, 'res://Assets/csv/encoded-Dialog_npc.csv')
+	return new_dialog
 
 func Camera_Position()->void:
 	PlayerCamera.position = self.position
